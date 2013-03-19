@@ -1,5 +1,5 @@
 class SearchForm
-	include AcriveModel::Model
+	include ActiveModel::Model
 
 	attr_accessor :q
 end
