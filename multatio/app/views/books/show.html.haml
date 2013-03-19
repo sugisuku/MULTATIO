@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @book.title
+%p
+  %b Reason:
+  = @book.reason
+%p
+  %b Price:
+  = @book.price
+%p
+  %b Url:
+  = @book.url
+%p
+  %b Severity:
+  = @book.severity
+%p
+  %b Howto:
+  = @book.howto
+%p
+  %b Buydate:
+  = @book.buydate
+%p
+  %b Country:
+  = @book.country
+
+= link_to 'Edit', edit_book_path(@book)
+\|
+= link_to 'Back', books_path
