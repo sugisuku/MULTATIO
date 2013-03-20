@@ -12,9 +12,11 @@
 %p
   %b Price:
   = @book.price
+  (税込)
 %p
   %b Url:
-  = @book.url
+  %a{:href => @book.url}
+    = @book.url
 %p
   %b Severity:
   = @book.severity
