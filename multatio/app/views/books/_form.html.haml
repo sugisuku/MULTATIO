@@ -23,7 +23,8 @@
     = f.number_field :severity
   .field
     = f.label :howto
-    = f.number_field :howto
+    -#= f.number_field :howto
+    = f.select :howto, [['1. team', 1],['2. team', 2],['3. other', 3]]
   .field
     = f.label :buydate
     = f.date_select :buydate

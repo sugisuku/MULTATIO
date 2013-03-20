@@ -10,7 +10,8 @@ gem 'haml-rails' # ERB じゃなくて Haml を使いたい
 gem 'twitter-bootstrap-rails' # Bootstrap の layout とかを generate してくれる
 # Ajaxを機能するように
 gem 'jquery-turbolinks'
-
+# ページネーション
+gem 'kaminari'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
