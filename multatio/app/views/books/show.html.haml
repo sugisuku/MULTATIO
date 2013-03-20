@@ -15,8 +15,9 @@
   (税込)
 %p
   %b Url:
-  %a{:href => @book.url}
-    = @book.url
+  =link_to @book.url, @book.url
+  -#%a{:href => @book.url}
+  -#  = @book.url
 %p
   %b Severity:
   = @book.severity

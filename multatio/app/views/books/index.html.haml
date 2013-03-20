@@ -28,7 +28,8 @@
       %td= book.title
       %td= book.reason
       %td= book.price
-      %td= book.url 
+      %td
+        =link_to book.url, book.url
       %td= book.severity
       %td= book.howto
       %td= book.buydate
