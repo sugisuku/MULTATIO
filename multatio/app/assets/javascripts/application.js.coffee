@@ -18,5 +18,5 @@
 #= require turbolinks
 #= require_tree .
 #= require bootstrap
-# require jquery.turbolinks
+#= require jquery.turbolinks
 
