@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130319003814) do
+ActiveRecord::Schema.define(version: 20130320084501) do
 
   create_table "books", force: true do |t|
     t.string   "title"
@@ -22,6 +22,23 @@ ActiveRecord::Schema.define(version: 20130319003814) do
     t.integer  "howto"
     t.date     "buydate"
     t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "identities", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "provider",    null: false
+    t.string   "uid",         null: false
+    t.string   "name",        null: false
+    t.string   "screen_name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

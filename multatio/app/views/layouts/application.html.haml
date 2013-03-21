@@ -6,7 +6,7 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %title= content_for?(:title) ? yield(:title) : "Multatio"
     = csrf_meta_tags
-    
+
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
@@ -30,7 +30,18 @@
             = image_tag("title.png")
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Log in", "/path2"
+              -# %li= link_to "Log in", "/path2"
+              - if current_user
+                Welcome
+                = current_user.name
+                %br
+                %li= link_to "Sign Out", signout_path
+              - else
+                %li= link_to "Sign in with Facebook", "/auth/facebook"
+                %br
+                -#= link_to "Sign in with Twitter", "/auth/twitter"
+
+
 
     .container
 
@@ -45,7 +56,7 @@
               %li.nav-header Sidebar
               %li= link_to "Books", "/books"
               %li= link_to "Routings", "/rootings"
-    
+
       %footer
         %hr
         %p &copy; (THE)ONE of THEM, Inc. 2013
