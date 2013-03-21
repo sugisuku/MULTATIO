@@ -20,7 +20,8 @@
     = f.text_field :url
   .field
     = f.label :severity
-    = f.number_field :severity
+    -#= f.number_field :severity
+    = f.select :severity, [['1. normal', 1],['2. hurryup', 2]]
   .field
     = f.label :howto
     -#= f.number_field :howto
