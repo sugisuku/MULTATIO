@@ -1,4 +1,9 @@
 Multatio::Application.routes.draw do
+  resources :users
+  #get "users/provider"
+  #get "users/uid"
+  #get "users/name"
+  #get "users/screen_name"
   resources :books
   root 'books#index'
   resources :users
