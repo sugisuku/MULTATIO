@@ -1,2 +1,27 @@
 %h1 Users#index
-%p Find me in app/views/users/index.html.haml
+
+%table{:class => "table"}
+  %tr
+    %th Provider
+    %th Uid
+    %th Name
+    %th SreenName
+    %th
+    %th
+    %th
+
+  -#  - @users.each do |user|
+  -#    %tr
+  %tbody
+    = content_tag_for :tr, @users do |user|
+      %td= user.provider
+      %td= user.uid
+      %td= user.name
+      %td= user.screen_name
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User', new_user_path
