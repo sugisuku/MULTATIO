@@ -32,7 +32,7 @@
             %ul.nav
               -# %li= link_to "Log in", "/path2"
               - if current_user
-                Welcome
+                %i{:class => "icon-user"}
                 = current_user.name
                 %br
                 %li= link_to "Sign Out", signout_path

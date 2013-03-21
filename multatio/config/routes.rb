@@ -1,6 +1,7 @@
 Multatio::Application.routes.draw do
   resources :books
   root 'books#index'
+  resources :users
 
   get '/auth/:provider/callback' => 'sessions#create'
   #get '/auth/:provider/callback' => 'sessions#callback'

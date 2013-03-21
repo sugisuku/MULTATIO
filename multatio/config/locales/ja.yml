@@ -1,4 +1,38 @@
 ja:
+  activemodel:
+    models:
+      user: "ユーザ"
+    attributes:
+      user:
+        name: "名前"
+
+    models:
+      book: "書籍購入"
+    attributes:
+      book:
+        title: "書籍名"
+        url: "URL"
+        reason: "購入理由"
+
+  label:
+    Editing_address: 住所録の更新
+    Listing_addresses: 住所録一覧
+    New_address: 住所録への新規登録
+    Namae: 名前
+    Yubin: 郵便
+    Jusho: 住所
+    Denwa: 電話
+    Are_you_sure?: 削除してよろしいですか？
+  link:
+    New_address: 追加
+    Show: 表示
+    Edit: 編集
+    Destroy: 削除
+    Back: 前画面
+  button:
+    Create: 新規登録実行
+    Update: 更新実行
+
   date:
     abbr_day_names:
     - 日
@@ -9,7 +43,7 @@ ja:
     - 金
     - 土
     abbr_month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月
@@ -35,7 +69,7 @@ ja:
       long: ! '%Y年%m月%d日(%a)'
       short: ! '%m/%d'
     month_names:
-    - 
+    -
     - 1月
     - 2月
     - 3月

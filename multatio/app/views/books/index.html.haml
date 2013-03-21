@@ -3,14 +3,17 @@
 %h1 Listing books
 
 -# = form_for @search_form, :url => books_path, :html => {:method => :get} do |f|
-= form_for @search_form, :url => books_path(format: :json), remote: true, :html => {:method => :get} do |f|
-  = f.search_field :q
-  = f.submit "Search", :class => "button submit"
+= form_for @search_form, :class => "form-search", :url => books_path(format: :json), remote: true, :html => {:method => :get} do |f|
+  .input-append
+    = f.search_field :q
+    = f.submit "Search", :class => "btn"
 
 %table{:class => "table"}
   %tr
-    %th Title
-    %th Reason
+    %th
+      = t('book.title')
+    %th
+      = t('reason')
     %th Price(税込)
     %th Url
     %th Severity
