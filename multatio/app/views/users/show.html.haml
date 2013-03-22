@@ -1,2 +1,20 @@
 %h1 Users#show
-%p Find me in app/views/users/show.html.haml
+
+%p#notice= notice
+
+%p
+  %b Provider
+  = @user.provider
+%p
+  %b Uid
+  = @user.uid
+%p
+  %b Name
+  = @user.name
+%p
+  %b SreenName
+  = @user.screen_name
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
