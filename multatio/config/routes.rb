@@ -1,4 +1,6 @@
 Multatio::Application.routes.draw do
+  resources :trains
+
   resources :users
   #get "users/provider"
   #get "users/uid"

@@ -6,3 +6,12 @@ $ ->
     $('tr.book').hide()
     ids = (books.map (b) -> "#book_#{b.id}").join(',')
     $(ids).show()
+
+###
+  setTimeout()->
+    $('#notice').fadeOut('slow')
+    , 800
+
+  $('a[data-method="delete"]').live('ajax:success', (e, data, status, xhr)->
+    $('#post_'+data.post.id).fadeOut("slow")
+###

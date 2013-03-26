@@ -1,0 +1,23 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @train.title
+%p
+  %b Memo:
+  = @train.memo
+%p
+  %b Take date:
+  = @train.take_date
+
+%p Route
+  - if @train.routes.any?
+    - @train.routes.each do |route|
+      = route.name
+-#%p
+  %b User:
+  = @train.user_id
+
+= link_to 'Edit', edit_train_path(@train)
+\|
+= link_to 'Back', trains_path

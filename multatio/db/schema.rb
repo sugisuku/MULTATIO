@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130320084501) do
+ActiveRecord::Schema.define(version: 20130326006223) do
 
   create_table "books", force: true do |t|
     t.string   "title"
@@ -30,6 +30,27 @@ ActiveRecord::Schema.define(version: 20130320084501) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "routes", force: true do |t|
+    t.string   "name"
+    t.integer  "order"
+    t.integer  "price"
+    t.integer  "user_id"
+    t.integer  "train_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "routes", ["train_id"], name: "index_routes_on_train_id"
+
+  create_table "trains", force: true do |t|
+    t.string   "title"
+    t.string   "memo"
+    t.date     "take_date"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
