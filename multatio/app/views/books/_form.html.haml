@@ -32,5 +32,8 @@
   .field
     = f.label :country
     = f.text_field :country
+  .field
+    = f.label :done_flag
+    = f.select :done_flag, [['Done', true],['NotYet', false]]
   .actions
     = f.submit 'Save'

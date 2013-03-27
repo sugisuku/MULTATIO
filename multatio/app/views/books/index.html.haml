@@ -20,6 +20,7 @@
     %th Howto
     %th Buydate
     %th Country
+    %th DoneFlag
     %th
     %th
     %th
@@ -37,6 +38,8 @@
       %td= book.howto
       %td= book.buydate
       %td= book.country
+      %td
+        = if book.done_flag then 'Done' else 'Noy Yet' end
       %td= link_to 'Show', book
       %td= link_to 'Edit', edit_book_path(book)
       %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }

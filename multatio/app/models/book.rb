@@ -8,4 +8,5 @@ class Book < ActiveRecord::Base
   validates_presence_of :severity
   validates_presence_of :title
   validates_presence_of :country
+  validates_inclusion_of :done_flag, :in => [true, false]
 end

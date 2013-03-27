@@ -30,6 +30,9 @@
 %p
   %b Country:
   = @book.country
+%p
+  %b DoneFlag:
+  = if @book.done_flag then 'Done' else 'Noy Yet' end
 
 = link_to 'Edit', edit_book_path(@book)
 \|
