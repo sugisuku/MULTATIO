@@ -10,6 +10,8 @@ class TrainsController < ApplicationController
   # GET /trains/1
   # GET /trains/1.json
   def show
+    @post = Train.find(params[:id])
+    @route = Train.find(params[:id]).routes.build
   end
 
   # GET /trains/new

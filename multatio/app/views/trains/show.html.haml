@@ -18,8 +18,15 @@
   %b User:
   = @train.user_id
 
-%p Add a comment
-
+%p Add Routes
+= form_for([@train, @route]) do |f|
+  = f.label :order
+  = f.text_field :order
+  = f.label :name
+  = f.text_field :name
+  = f.label :price
+  = f.text_field :price
+  = f.submit
 
 = link_to 'Edit', edit_train_path(@train)
 \|
