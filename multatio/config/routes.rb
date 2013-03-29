@@ -1,4 +1,5 @@
 Multatio::Application.routes.draw do
+  get "routes/create"
   resources :trains do
     resources :routes
   end
